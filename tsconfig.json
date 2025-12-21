@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "target": "es2017",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "types": [
+      "@ragempcommunity/types-server"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}

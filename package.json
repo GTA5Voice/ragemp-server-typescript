@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build": "tsup",
+    "buildsafe": "npx tsc --noEmit && tsup"
+  },
+  "dependencies": {
+    "@ragempcommunity/types-server": "^2.1.9",
+    "tsup": "^8.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
