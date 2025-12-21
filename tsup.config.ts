@@ -4,7 +4,7 @@ const baseConfig = defineConfig({
   entry: ["src/index.ts"],
   format: ["cjs"],
   target: "es2017",
-  outDir: "dist\\gta5voice",
+  outDir: "build\\gta5voice",
   clean: true,
   minify: true,
   bundle: true,
