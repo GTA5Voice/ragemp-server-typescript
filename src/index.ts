@@ -19,7 +19,6 @@ registerRadioEvents();
 mp.events.add("packagesLoaded", () => {
   settingsService.initialize();
   ConsoleLogger.configure(settingsService);
-  ConsoleLogger.info("GTA5Voice initialized.");
 });
 
 mp.events.add("playerJoin", (player: PlayerMp) => {

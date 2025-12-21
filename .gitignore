@@ -24,6 +24,7 @@ package-lock.json
 
 # Local configuration that shouldn't be shared
 *.local
+tsup.config.local.ts
 
 ### Typescript ###
 # typescript specific files

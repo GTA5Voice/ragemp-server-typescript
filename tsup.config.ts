@@ -1,6 +1,6 @@
 import { defineConfig } from "tsup";
 
-export default defineConfig({
+const baseConfig = defineConfig({
   entry: ["src/index.ts"],
   format: ["cjs"],
   target: "es2017",
@@ -8,4 +8,20 @@ export default defineConfig({
   clean: true,
   minify: true,
   bundle: true,
+});
+
+export default defineConfig(async (options) => {
+  let localOverride = {};
+
+  try {
+    const localConfig = await import("./tsup.config.local");
+    localOverride = localConfig.default ?? {};
+  } catch {
+    localOverride = {};
+  }
+
+  return {
+    ...baseConfig,
+    ...localOverride,
+  };
 });
