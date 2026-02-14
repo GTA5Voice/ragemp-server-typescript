@@ -10,6 +10,9 @@ export class VoiceData {
   CalculationInterval: number;
   VoiceRanges: string;
   ExcludedChannels: string;
+  EnableDistanceBasedVolume: boolean;
+  VolumeDecreaseMultiplier: number;
+  MinimumVoiceVolume: number;
 
   constructor(settingsService: SettingsService) {
     this.VirtualServerUid = settingsService.getString(Settings.virtualServerUid.key);
@@ -25,6 +28,18 @@ export class VoiceData {
     this.ExcludedChannels = settingsService.getString(
       Settings.excludedChannels.key,
       Settings.excludedChannels.defaultValue ?? "[]"
+    );
+    this.EnableDistanceBasedVolume = settingsService.getBoolean(
+      Settings.enableDistanceBasedVolume.key,
+      Settings.enableDistanceBasedVolume.defaultValue ?? false
+    );
+    this.VolumeDecreaseMultiplier = settingsService.getNumber(
+      Settings.volumeDecreaseMultiplier.key,
+      Settings.volumeDecreaseMultiplier.defaultValue ?? 1.0
+    );
+    this.MinimumVoiceVolume = settingsService.getNumber(
+      Settings.minimumVoiceVolume.key,
+      Settings.minimumVoiceVolume.defaultValue ?? 0.25
     );
   }
 }

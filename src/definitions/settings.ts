@@ -16,4 +16,7 @@ export const Settings = {
   calculationInterval: { key: "CalculationInterval", defaultValue: 250 } as SettingDefinition<number>,
   voiceRanges: { key: "VoiceRanges", defaultValue: "[1, 3, 8, 15]" } as SettingDefinition<string>,
   excludedChannels: { key: "ExcludedChannels", defaultValue: "[]" } as SettingDefinition<string>,
+  enableDistanceBasedVolume: { key: "EnableDistanceBasedVolume", defaultValue: false } as SettingDefinition<boolean>,
+  volumeDecreaseMultiplier: { key: "VolumeDecreaseMultiplier", defaultValue: 1.0 } as SettingDefinition<number>,
+  minimumVoiceVolume: { key: "MinimumVoiceVolume", defaultValue: 0.25 } as SettingDefinition<number>,
 };

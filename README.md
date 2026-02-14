@@ -42,7 +42,10 @@ require('gta5voice');
   "Language": "en",
   "CalculationInterval": 250,
   "VoiceRanges": "[2, 5, 8, 15]",
-  "ExcludedChannels": "[100, 200, 300]"
+  "ExcludedChannels": "[100, 200, 300]",
+  "EnableDistanceBasedVolume": false,
+  "VolumeDecreaseMultiplier": 1.0,
+  "MinimumVoiceVolume": 0.25
 }
 ```
 2. Make sure your Virtual Server UID is registered at [https://gta5voice.com](https://gta5voice.com).

@@ -97,6 +97,9 @@ export class SettingsService {
       Settings.calculationInterval,
       Settings.voiceRanges,
       Settings.excludedChannels,
+      Settings.enableDistanceBasedVolume,
+      Settings.volumeDecreaseMultiplier,
+      Settings.minimumVoiceVolume,
     ];
   }
 }
